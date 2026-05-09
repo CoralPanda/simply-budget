@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimplyBudget.Services
 {
-    internal class AppSettings
+    public class AppSettings
     {
     }
 }

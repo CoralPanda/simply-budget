@@ -9,7 +9,7 @@ namespace SimplyBudget.Models
     /// <summary>
     /// Represents the type of a financial record
     /// </summary>
-    enum RecordType
+    public enum RecordType
     {
         /// <summary>
         /// Incoming money (e.g. salary, gift, )

@@ -63,18 +63,17 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // importDataToolStripMenuItem
             // 
             this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
-            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importDataToolStripMenuItem.Text = "Import data...";
             // 
             // exportDataToolStripMenuItem
             // 
             this.exportDataToolStripMenuItem.Name = "exportDataToolStripMenuItem";
-            this.exportDataToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.exportDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportDataToolStripMenuItem.Text = "Export data...";
             // 
             // settingsToolStripMenuItem
@@ -84,14 +83,12 @@
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // openSettingsToolStripMenuItem
             // 
             this.openSettingsToolStripMenuItem.Name = "openSettingsToolStripMenuItem";
-            this.openSettingsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.openSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openSettingsToolStripMenuItem.Text = "Open settings...";
-            this.openSettingsToolStripMenuItem.Click += new System.EventHandler(this.openSettingsToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -113,6 +110,7 @@
             this.buttonRecordAdd.TabIndex = 2;
             this.buttonRecordAdd.Text = "Add record...";
             this.buttonRecordAdd.UseVisualStyleBackColor = true;
+            this.buttonRecordAdd.Click += new System.EventHandler(this.buttonRecordAdd_Click);
             // 
             // buttonRecordEdit
             // 

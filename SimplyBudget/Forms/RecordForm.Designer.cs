@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioRecordTypeIncome = new System.Windows.Forms.RadioButton();
             this.radioRecordTypeExpense = new System.Windows.Forms.RadioButton();
@@ -44,11 +45,13 @@
             this.richTextBoxRecordDescription = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.errorProviderRecord = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderRecord)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -204,6 +207,10 @@
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // errorProviderRecord
+            // 
+            this.errorProviderRecord.ContainerControl = this;
+            // 
             // RecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +223,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "RecordForm";
             this.Text = "RecordForm";
             this.groupBox1.ResumeLayout(false);
@@ -225,6 +233,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderRecord)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,5 +256,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxRecordDescription;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ErrorProvider errorProviderRecord;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimplyBudget.Models.Factories
 {
-    internal class RecordFactory
+    public class RecordFactory
     {
     }
 }

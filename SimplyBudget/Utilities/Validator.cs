@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimplyBudget.Utilities
 {
-    internal class Validator
+    public class Validator
     {
     }
 }

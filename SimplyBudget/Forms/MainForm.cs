@@ -17,19 +17,11 @@ namespace SimplyBudget
             InitializeComponent();
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonRecordAdd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void openSettingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            // Creates a new instance of a Record Form and then opens the form modally
+            RecordForm recordForm = new RecordForm();
+            recordForm.ShowDialog(); 
         }
     }
 }
