@@ -76,7 +76,6 @@
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\RecordManager.cs" />
-    <Compile Include="Services\StorageManager.cs" />
     <Compile Include="Utilities\AppSettings.cs" />
     <Compile Include="Utilities\Validator.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
@@ -95,6 +94,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Content Include="Data\settings.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
