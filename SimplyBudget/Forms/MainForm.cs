@@ -30,14 +30,19 @@ namespace SimplyBudget
             dataGridViewLatestRecords.DataSource = bindingSource;
             bindingSource.DataSource = BudgetManager.GetLatestRecords();
 
+            // Hides the ID column after all data is loaded and sets double decimal format to the Amount column
             dataGridViewLatestRecords.DataBindingComplete += (s, e) =>
             {
                 dataGridViewLatestRecords.Columns[0].Visible = false;
+                dataGridViewLatestRecords.Columns["Amount"].DefaultCellStyle.Format = "F2";
             };
 
             UpdateUI();
         }
 
+        /* ============================================================================== */
+        /*                                   CLICK EVENTS                                 */
+        /* ============================================================================== */
         private void buttonRecordAdd_Click(object sender, EventArgs e)
         {
             // Creates a new instance of a Record Form and then opens the form modally
@@ -91,7 +96,7 @@ namespace SimplyBudget
                 "Are you sure you want to delete this record?",
                 "Delete record?",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
+                MessageBoxIcon.Information
             );
 
             if (result == DialogResult.Yes)
@@ -148,14 +153,35 @@ namespace SimplyBudget
             RecordManager.Instance.Save();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Opens a popup to confirm if the user wants to delete all records
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to delete ALL records?",
+                "Delete ALL records?",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // Deletes all records
+                RecordManager.Instance.Clear();
+
+                UpdateUI();
+            }
+        }
+
+        /* ============================================================================== */
+        /*                            HELPER METHODS & OTHER UI                           */
+        /* ============================================================================== */
         private void UpdateUI()
         {
             // Refreshes the DataGrid with latest data
             bindingSource.DataSource = BudgetManager.GetLatestRecords();
 
-            /* =================================== */
-            /*            CURRENT MONTH            */
-            /* =================================== */
+
+            /* ================ CURRENT MONTH ================ */
 
             // Create a string for the highest incomes/expenses of the current month
             Record highestIncome = BudgetManager.GetHighestIncomeByMonth(DateTime.Now);
@@ -174,16 +200,37 @@ namespace SimplyBudget
             // Progress bar for spent income
             decimal income = BudgetManager.GetIncomesByMonth(DateTime.Now);
             decimal expense = BudgetManager.GetExpensesByMonth(DateTime.Now);
+            int percentageOfCurrent = (int)((expense / income) * 100);
 
             if (income > 0)
-            {
-                int percentage = (int)((expense / income) * 100);
-                progressBarCurrentMonth.Value = Math.Min(percentage, 100);
-            }
+                progressBarCurrentMonth.Value = Math.Min(percentageOfCurrent, 100);
             else
-            {
                 progressBarCurrentMonth.Value = 0;
-            }
+
+
+            /* ==================== OVERALL =================== */
+            Record highestExpenseOverall = BudgetManager.GetHighestExpense();
+            string overallHighestExpense = highestExpenseOverall != null ? $"{highestExpenseOverall.Amount} {AppSettings.Instance.Currency}, {highestExpenseOverall.Category}" : "0";
+
+            labelOverallTotalIncome.Text = BudgetManager.GetTotalIncomes().ToString();
+            labelOverallTotalExpenses.Text = BudgetManager.GetTotalExpenses().ToString();
+            labelOverallCurrentSavings.Text = BudgetManager.GetTotalSavings().ToString();
+            labelOverallHighestExpense.Text = overallHighestExpense;
+            labelOverallAverageIncome.Text = BudgetManager.GetAverageMonthlyIncome().ToString();
+            labelOverallAverageExpenses.Text = BudgetManager.GetAverageMonthlyExpense().ToString();
+
+            // Progress bar for spent income
+            decimal totalIncome = BudgetManager.GetTotalIncomes();
+            decimal totalExpense = BudgetManager.GetTotalExpenses();
+            int percentageOfOverall = (int)((expense / income) * 100);
+
+            if (income > 0)
+                progressBarOverallSavings.Value = Math.Min(percentageOfOverall, 100);
+            else
+                progressBarOverallSavings.Value = 0;
+
+            /* ================ SELECTED MONTH =============== */
+            
         }
     }
 }

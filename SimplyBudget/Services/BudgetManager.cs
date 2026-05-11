@@ -93,6 +93,30 @@ namespace SimplyBudget.Services
         }
 
         /// <summary>
+        /// Get the highest income record from all records.
+        /// </summary>
+        /// <returns>Highest income overall.</returns>
+        public static Record GetHighestIncome()
+        {
+            return RecordManager.Instance.GetAll()
+                .Where(record => record.Type == RecordType.Income)
+                .OrderByDescending(record => record.Amount)
+                .FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Get the highest expense record from all records.
+        /// </summary>
+        /// <returns>Highest expense overall.</returns>
+        public static Record GetHighestExpense()
+        {
+            return RecordManager.Instance.GetAll()
+                .Where(record => record.Type == RecordType.Expense)
+                .OrderByDescending(record => record.Amount)
+                .FirstOrDefault();
+        }
+
+        /// <summary>
         /// Calculates the difference between incomes and expenses by month.
         /// </summary>
         /// <param name="date">Month to calculate.</param>
@@ -140,6 +164,45 @@ namespace SimplyBudget.Services
             return RecordManager.Instance.GetAll()
                 .OrderByDescending(record => record.Date)
                 .ToList();
+        }
+
+        /// <summary>
+        /// Calculates the average monthly income rounded to 2 decimal points.
+        /// </summary>
+        /// <returns>Average monthly income.</returns>
+        public static decimal GetAverageMonthlyIncome()
+        {
+            return Math.Round(RecordManager.Instance.GetAll()
+                .Where(record => record.Type == RecordType.Income)
+                .Average(record => record.Amount), 2);
+        }
+
+        /// <summary>
+        /// Calculates the average monthly expense rounded to 2 decimal points.
+        /// </summary>
+        /// <returns>Average monthly income.</returns>
+        public static decimal GetAverageMonthlyExpense()
+        {
+            return Math.Round(RecordManager.Instance.GetAll()
+                .Where(record => record.Type == RecordType.Expense)
+                .Average(record => record.Amount), 2);
+        }
+        
+        /// <summary>
+        /// Calculates total savings.
+        /// </summary>
+        /// <returns>Total savings.</returns>
+        public static decimal GetTotalSavings()
+        {
+            decimal incomes = RecordManager.Instance.GetAll()
+                                                    .Where(record => record.Type == RecordType.Income)
+                                                    .Sum(record => record.Amount);
+
+            decimal expenses = RecordManager.Instance.GetAll()
+                                                     .Where(record => record.Type == RecordType.Expense)
+                                                     .Sum(record => record.Amount);
+
+            return incomes - expenses;
         }
     }
 }

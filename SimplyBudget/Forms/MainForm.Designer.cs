@@ -44,7 +44,10 @@
             this.buttonExitSave = new System.Windows.Forms.Button();
             this.buttonOverview = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonResetChanges = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.labelCurrentMostCommon = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -59,21 +62,35 @@
             this.labelCurrentIncomes = new System.Windows.Forms.Label();
             this.progressBarCurrentMonth = new System.Windows.Forms.ProgressBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.progressBarOverallSavings = new System.Windows.Forms.ProgressBar();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.labelOverallHighestExpense = new System.Windows.Forms.Label();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.labelOverallCurrentSavings = new System.Windows.Forms.Label();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.labelOverallTotalExpenses = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.labelOverallTotalIncome = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.labelOverallAverageExpenses = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.labelOverallAverageIncome = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.labelSelectedMostCommon = new System.Windows.Forms.Label();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.labelSelectedHighestExpense = new System.Windows.Forms.Label();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.labelSelectedHighestIncome = new System.Windows.Forms.Label();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.labelSelectedReamined = new System.Windows.Forms.Label();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.labelSelectedExpenses = new System.Windows.Forms.Label();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.labelSelectedIncome = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonResetChanges = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLatestRecords)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -85,7 +102,19 @@
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox17.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -112,19 +141,19 @@
             // importDataToolStripMenuItem
             // 
             this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
-            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importDataToolStripMenuItem.Text = "Import data...";
             // 
             // exportDataToolStripMenuItem
             // 
             this.exportDataToolStripMenuItem.Name = "exportDataToolStripMenuItem";
-            this.exportDataToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.exportDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportDataToolStripMenuItem.Text = "Export data...";
             // 
             // saveAllToolStripMenuItem
             // 
             this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveAllToolStripMenuItem.Text = "Save all";
             this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
             // 
@@ -140,31 +169,32 @@
             // openSettingsToolStripMenuItem
             // 
             this.openSettingsToolStripMenuItem.Name = "openSettingsToolStripMenuItem";
-            this.openSettingsToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.openSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openSettingsToolStripMenuItem.Text = "Open settings...";
             // 
             // exitApplicationToolStripMenuItem
             // 
             this.exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
-            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitApplicationToolStripMenuItem.Text = "Exit application...";
             // 
             // dataGridViewLatestRecords
             // 
             this.dataGridViewLatestRecords.AllowUserToAddRows = false;
             this.dataGridViewLatestRecords.AllowUserToDeleteRows = false;
-            this.dataGridViewLatestRecords.AllowUserToResizeColumns = false;
             this.dataGridViewLatestRecords.AllowUserToResizeRows = false;
             this.dataGridViewLatestRecords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewLatestRecords.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewLatestRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewLatestRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLatestRecords.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewLatestRecords.Location = new System.Drawing.Point(6, 19);
             this.dataGridViewLatestRecords.MultiSelect = false;
             this.dataGridViewLatestRecords.Name = "dataGridViewLatestRecords";
             this.dataGridViewLatestRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewLatestRecords.Size = new System.Drawing.Size(591, 263);
+            this.dataGridViewLatestRecords.Size = new System.Drawing.Size(591, 250);
             this.dataGridViewLatestRecords.TabIndex = 1;
             this.dataGridViewLatestRecords.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewLatestRecords_CellMouseDoubleClick);
             // 
@@ -172,11 +202,11 @@
             // 
             this.buttonRecordAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRecordAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRecordAdd.Location = new System.Drawing.Point(6, 288);
+            this.buttonRecordAdd.Location = new System.Drawing.Point(6, 275);
             this.buttonRecordAdd.Name = "buttonRecordAdd";
-            this.buttonRecordAdd.Size = new System.Drawing.Size(98, 23);
+            this.buttonRecordAdd.Size = new System.Drawing.Size(66, 23);
             this.buttonRecordAdd.TabIndex = 2;
-            this.buttonRecordAdd.Text = "Add record...";
+            this.buttonRecordAdd.Text = "Add...";
             this.buttonRecordAdd.UseVisualStyleBackColor = true;
             this.buttonRecordAdd.Click += new System.EventHandler(this.buttonRecordAdd_Click);
             // 
@@ -184,22 +214,22 @@
             // 
             this.buttonRecordEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRecordEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRecordEdit.Location = new System.Drawing.Point(110, 288);
+            this.buttonRecordEdit.Location = new System.Drawing.Point(78, 275);
             this.buttonRecordEdit.Name = "buttonRecordEdit";
-            this.buttonRecordEdit.Size = new System.Drawing.Size(98, 23);
+            this.buttonRecordEdit.Size = new System.Drawing.Size(66, 23);
             this.buttonRecordEdit.TabIndex = 3;
-            this.buttonRecordEdit.Text = "Edit record...";
+            this.buttonRecordEdit.Text = "Edit...";
             this.buttonRecordEdit.UseVisualStyleBackColor = true;
             this.buttonRecordEdit.Click += new System.EventHandler(this.buttonRecordEdit_Click);
             // 
             // buttonRecordDelete
             // 
             this.buttonRecordDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonRecordDelete.Location = new System.Drawing.Point(214, 288);
+            this.buttonRecordDelete.Location = new System.Drawing.Point(150, 275);
             this.buttonRecordDelete.Name = "buttonRecordDelete";
-            this.buttonRecordDelete.Size = new System.Drawing.Size(98, 23);
+            this.buttonRecordDelete.Size = new System.Drawing.Size(66, 23);
             this.buttonRecordDelete.TabIndex = 4;
-            this.buttonRecordDelete.Text = "Delete record";
+            this.buttonRecordDelete.Text = "Delete";
             this.buttonRecordDelete.UseVisualStyleBackColor = true;
             this.buttonRecordDelete.Click += new System.EventHandler(this.buttonRecordDelete_Click);
             // 
@@ -218,7 +248,7 @@
             // buttonOverview
             // 
             this.buttonOverview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOverview.Location = new System.Drawing.Point(395, 288);
+            this.buttonOverview.Location = new System.Drawing.Point(395, 275);
             this.buttonOverview.Name = "buttonOverview";
             this.buttonOverview.Size = new System.Drawing.Size(98, 23);
             this.buttonOverview.TabIndex = 6;
@@ -227,21 +257,45 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.buttonResetChanges);
             this.groupBox2.Controls.Add(this.dataGridViewLatestRecords);
             this.groupBox2.Controls.Add(this.buttonRecordAdd);
             this.groupBox2.Controls.Add(this.buttonOverview);
             this.groupBox2.Controls.Add(this.buttonRecordEdit);
             this.groupBox2.Controls.Add(this.buttonRecordDelete);
-            this.groupBox2.Location = new System.Drawing.Point(12, 232);
+            this.groupBox2.Location = new System.Drawing.Point(12, 245);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(603, 317);
+            this.groupBox2.Size = new System.Drawing.Size(603, 304);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Latest records";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(222, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(66, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Delete all";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonResetChanges
+            // 
+            this.buttonResetChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonResetChanges.Location = new System.Drawing.Point(499, 275);
+            this.buttonResetChanges.Name = "buttonResetChanges";
+            this.buttonResetChanges.Size = new System.Drawing.Size(98, 23);
+            this.buttonResetChanges.TabIndex = 7;
+            this.buttonResetChanges.Text = "Reset changes";
+            this.buttonResetChanges.UseVisualStyleBackColor = true;
+            this.buttonResetChanges.Click += new System.EventHandler(this.buttonResetChanges_Click);
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.groupBox10);
             this.groupBox3.Controls.Add(this.groupBox9);
             this.groupBox3.Controls.Add(this.groupBox8);
@@ -252,10 +306,19 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 27);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(299, 199);
+            this.groupBox3.Size = new System.Drawing.Size(299, 212);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Current month";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 161);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Money spent this month";
             // 
             // groupBox10
             // 
@@ -360,7 +423,7 @@
             this.groupBox1.Size = new System.Drawing.Size(134, 41);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Incomes";
+            this.groupBox1.Text = "Income";
             // 
             // labelCurrentIncomes
             // 
@@ -374,7 +437,7 @@
             // progressBarCurrentMonth
             // 
             this.progressBarCurrentMonth.Enabled = false;
-            this.progressBarCurrentMonth.Location = new System.Drawing.Point(7, 164);
+            this.progressBarCurrentMonth.Location = new System.Drawing.Point(7, 177);
             this.progressBarCurrentMonth.MarqueeAnimationSpeed = 0;
             this.progressBarCurrentMonth.Name = "progressBarCurrentMonth";
             this.progressBarCurrentMonth.Size = new System.Drawing.Size(286, 23);
@@ -382,72 +445,164 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.progressBarOverallSavings);
+            this.groupBox4.Controls.Add(this.groupBox16);
+            this.groupBox4.Controls.Add(this.groupBox15);
+            this.groupBox4.Controls.Add(this.groupBox14);
+            this.groupBox4.Controls.Add(this.groupBox13);
+            this.groupBox4.Controls.Add(this.groupBox12);
+            this.groupBox4.Controls.Add(this.groupBox11);
             this.groupBox4.Location = new System.Drawing.Point(317, 27);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(298, 199);
+            this.groupBox4.Size = new System.Drawing.Size(298, 212);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Overall statistics";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Current savings";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(147, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Total expenses";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Total income";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(147, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Average monthly expenses";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Location = new System.Drawing.Point(3, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Average monthly income";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Total money spent";
+            // 
+            // progressBarOverallSavings
+            // 
+            this.progressBarOverallSavings.Enabled = false;
+            this.progressBarOverallSavings.Location = new System.Drawing.Point(6, 177);
+            this.progressBarOverallSavings.MarqueeAnimationSpeed = 0;
+            this.progressBarOverallSavings.Name = "progressBarOverallSavings";
+            this.progressBarOverallSavings.Size = new System.Drawing.Size(286, 23);
+            this.progressBarOverallSavings.TabIndex = 13;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.labelOverallHighestExpense);
+            this.groupBox16.Location = new System.Drawing.Point(150, 115);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(142, 41);
+            this.groupBox16.TabIndex = 12;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Highest expense";
+            // 
+            // labelOverallHighestExpense
+            // 
+            this.labelOverallHighestExpense.AutoSize = true;
+            this.labelOverallHighestExpense.Location = new System.Drawing.Point(6, 16);
+            this.labelOverallHighestExpense.Name = "labelOverallHighestExpense";
+            this.labelOverallHighestExpense.Size = new System.Drawing.Size(10, 13);
+            this.labelOverallHighestExpense.TabIndex = 3;
+            this.labelOverallHighestExpense.Text = "-";
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.labelOverallCurrentSavings);
+            this.groupBox15.Location = new System.Drawing.Point(6, 114);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(138, 41);
+            this.groupBox15.TabIndex = 11;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Current savings";
+            // 
+            // labelOverallCurrentSavings
+            // 
+            this.labelOverallCurrentSavings.AutoSize = true;
+            this.labelOverallCurrentSavings.Location = new System.Drawing.Point(7, 16);
+            this.labelOverallCurrentSavings.Name = "labelOverallCurrentSavings";
+            this.labelOverallCurrentSavings.Size = new System.Drawing.Size(10, 13);
+            this.labelOverallCurrentSavings.TabIndex = 2;
+            this.labelOverallCurrentSavings.Text = "-";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.labelOverallTotalExpenses);
+            this.groupBox14.Location = new System.Drawing.Point(150, 68);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(142, 41);
+            this.groupBox14.TabIndex = 11;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Total expenses";
+            // 
+            // labelOverallTotalExpenses
+            // 
+            this.labelOverallTotalExpenses.AutoSize = true;
+            this.labelOverallTotalExpenses.Location = new System.Drawing.Point(6, 16);
+            this.labelOverallTotalExpenses.Name = "labelOverallTotalExpenses";
+            this.labelOverallTotalExpenses.Size = new System.Drawing.Size(10, 13);
+            this.labelOverallTotalExpenses.TabIndex = 2;
+            this.labelOverallTotalExpenses.Text = "-";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.labelOverallTotalIncome);
+            this.groupBox13.Location = new System.Drawing.Point(6, 67);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(138, 41);
+            this.groupBox13.TabIndex = 10;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Total income";
+            // 
+            // labelOverallTotalIncome
+            // 
+            this.labelOverallTotalIncome.AutoSize = true;
+            this.labelOverallTotalIncome.Location = new System.Drawing.Point(7, 16);
+            this.labelOverallTotalIncome.Name = "labelOverallTotalIncome";
+            this.labelOverallTotalIncome.Size = new System.Drawing.Size(10, 13);
+            this.labelOverallTotalIncome.TabIndex = 1;
+            this.labelOverallTotalIncome.Text = "-";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.labelOverallAverageExpenses);
+            this.groupBox12.Location = new System.Drawing.Point(150, 20);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(142, 41);
+            this.groupBox12.TabIndex = 10;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Avg. monthly expenses";
+            // 
+            // labelOverallAverageExpenses
+            // 
+            this.labelOverallAverageExpenses.AutoSize = true;
+            this.labelOverallAverageExpenses.Location = new System.Drawing.Point(6, 16);
+            this.labelOverallAverageExpenses.Name = "labelOverallAverageExpenses";
+            this.labelOverallAverageExpenses.Size = new System.Drawing.Size(10, 13);
+            this.labelOverallAverageExpenses.TabIndex = 1;
+            this.labelOverallAverageExpenses.Text = "-";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.labelOverallAverageIncome);
+            this.groupBox11.Location = new System.Drawing.Point(6, 20);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(138, 41);
+            this.groupBox11.TabIndex = 9;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Avg. monthly income";
+            // 
+            // labelOverallAverageIncome
+            // 
+            this.labelOverallAverageIncome.AutoSize = true;
+            this.labelOverallAverageIncome.Location = new System.Drawing.Point(7, 15);
+            this.labelOverallAverageIncome.Name = "labelOverallAverageIncome";
+            this.labelOverallAverageIncome.Size = new System.Drawing.Size(10, 13);
+            this.labelOverallAverageIncome.TabIndex = 0;
+            this.labelOverallAverageIncome.Text = "-";
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.groupBox22);
+            this.groupBox5.Controls.Add(this.groupBox21);
+            this.groupBox5.Controls.Add(this.groupBox20);
+            this.groupBox5.Controls.Add(this.groupBox19);
+            this.groupBox5.Controls.Add(this.groupBox18);
+            this.groupBox5.Controls.Add(this.groupBox17);
             this.groupBox5.Controls.Add(this.monthCalendar1);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Location = new System.Drawing.Point(627, 27);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(251, 487);
@@ -455,65 +610,128 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Selected month";
             // 
+            // groupBox22
+            // 
+            this.groupBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox22.Controls.Add(this.labelSelectedMostCommon);
+            this.groupBox22.Location = new System.Drawing.Point(12, 254);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(227, 41);
+            this.groupBox22.TabIndex = 12;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Most common category";
+            // 
+            // labelSelectedMostCommon
+            // 
+            this.labelSelectedMostCommon.AutoSize = true;
+            this.labelSelectedMostCommon.Location = new System.Drawing.Point(6, 16);
+            this.labelSelectedMostCommon.Name = "labelSelectedMostCommon";
+            this.labelSelectedMostCommon.Size = new System.Drawing.Size(10, 13);
+            this.labelSelectedMostCommon.TabIndex = 5;
+            this.labelSelectedMostCommon.Text = "-";
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.labelSelectedHighestExpense);
+            this.groupBox21.Location = new System.Drawing.Point(12, 207);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(227, 41);
+            this.groupBox21.TabIndex = 10;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Highest income";
+            // 
+            // labelSelectedHighestExpense
+            // 
+            this.labelSelectedHighestExpense.AutoSize = true;
+            this.labelSelectedHighestExpense.Location = new System.Drawing.Point(6, 16);
+            this.labelSelectedHighestExpense.Name = "labelSelectedHighestExpense";
+            this.labelSelectedHighestExpense.Size = new System.Drawing.Size(10, 13);
+            this.labelSelectedHighestExpense.TabIndex = 1;
+            this.labelSelectedHighestExpense.Text = "-";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.labelSelectedHighestIncome);
+            this.groupBox20.Location = new System.Drawing.Point(12, 160);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(227, 41);
+            this.groupBox20.TabIndex = 10;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Highest income";
+            // 
+            // labelSelectedHighestIncome
+            // 
+            this.labelSelectedHighestIncome.AutoSize = true;
+            this.labelSelectedHighestIncome.Location = new System.Drawing.Point(6, 16);
+            this.labelSelectedHighestIncome.Name = "labelSelectedHighestIncome";
+            this.labelSelectedHighestIncome.Size = new System.Drawing.Size(10, 13);
+            this.labelSelectedHighestIncome.TabIndex = 1;
+            this.labelSelectedHighestIncome.Text = "-";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.labelSelectedReamined);
+            this.groupBox19.Location = new System.Drawing.Point(12, 113);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(227, 41);
+            this.groupBox19.TabIndex = 13;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Remained";
+            // 
+            // labelSelectedReamined
+            // 
+            this.labelSelectedReamined.AutoSize = true;
+            this.labelSelectedReamined.Location = new System.Drawing.Point(6, 16);
+            this.labelSelectedReamined.Name = "labelSelectedReamined";
+            this.labelSelectedReamined.Size = new System.Drawing.Size(10, 13);
+            this.labelSelectedReamined.TabIndex = 3;
+            this.labelSelectedReamined.Text = "-";
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.labelSelectedExpenses);
+            this.groupBox18.Location = new System.Drawing.Point(12, 66);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(227, 41);
+            this.groupBox18.TabIndex = 12;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Expenses";
+            // 
+            // labelSelectedExpenses
+            // 
+            this.labelSelectedExpenses.AutoSize = true;
+            this.labelSelectedExpenses.Location = new System.Drawing.Point(6, 16);
+            this.labelSelectedExpenses.Name = "labelSelectedExpenses";
+            this.labelSelectedExpenses.Size = new System.Drawing.Size(10, 13);
+            this.labelSelectedExpenses.TabIndex = 3;
+            this.labelSelectedExpenses.Text = "-";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.labelSelectedIncome);
+            this.groupBox17.Location = new System.Drawing.Point(12, 19);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(227, 41);
+            this.groupBox17.TabIndex = 9;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Income";
+            // 
+            // labelSelectedIncome
+            // 
+            this.labelSelectedIncome.AutoSize = true;
+            this.labelSelectedIncome.Location = new System.Drawing.Point(6, 16);
+            this.labelSelectedIncome.Name = "labelSelectedIncome";
+            this.labelSelectedIncome.Size = new System.Drawing.Size(10, 13);
+            this.labelSelectedIncome.TabIndex = 0;
+            this.labelSelectedIncome.Text = "-";
+            // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(12, 313);
+            this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.monthCalendar1.Location = new System.Drawing.Point(12, 307);
             this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.ShowTodayCircle = false;
             this.monthCalendar1.TabIndex = 6;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 231);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(160, 13);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Most common expense category";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 139);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Highest income";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 187);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 13);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Highest expense";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 96);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 13);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Remained";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 55);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 13);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Expenses";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(47, 13);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Incomes";
             // 
             // buttonExit
             // 
@@ -524,17 +742,6 @@
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // buttonResetChanges
-            // 
-            this.buttonResetChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonResetChanges.Location = new System.Drawing.Point(499, 288);
-            this.buttonResetChanges.Name = "buttonResetChanges";
-            this.buttonResetChanges.Size = new System.Drawing.Size(98, 23);
-            this.buttonResetChanges.TabIndex = 7;
-            this.buttonResetChanges.Text = "Reset changes";
-            this.buttonResetChanges.UseVisualStyleBackColor = true;
-            this.buttonResetChanges.Click += new System.EventHandler(this.buttonResetChanges_Click);
             // 
             // MainForm
             // 
@@ -550,6 +757,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(900, 600);
             this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "MainForm";
             this.Text = "Simply Budget.";
@@ -558,6 +766,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLatestRecords)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -572,8 +781,31 @@
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,19 +829,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ToolStripMenuItem exitApplicationToolStripMenuItem;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar progressBarCurrentMonth;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ToolStripMenuItem saveAllToolStripMenuItem;
         private System.Windows.Forms.Button buttonExit;
@@ -626,6 +847,34 @@
         private System.Windows.Forms.Label labelCurrentCurrentBalance;
         private System.Windows.Forms.Label labelCurrentExpenses;
         private System.Windows.Forms.Button buttonResetChanges;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ProgressBar progressBarOverallSavings;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Label labelOverallHighestExpense;
+        private System.Windows.Forms.Label labelOverallCurrentSavings;
+        private System.Windows.Forms.Label labelOverallTotalExpenses;
+        private System.Windows.Forms.Label labelOverallTotalIncome;
+        private System.Windows.Forms.Label labelOverallAverageExpenses;
+        private System.Windows.Forms.Label labelOverallAverageIncome;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.Label labelSelectedMostCommon;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.Label labelSelectedHighestExpense;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.Label labelSelectedHighestIncome;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Label labelSelectedReamined;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.Label labelSelectedExpenses;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Label labelSelectedIncome;
+        private System.Windows.Forms.Button button1;
     }
 }
 
