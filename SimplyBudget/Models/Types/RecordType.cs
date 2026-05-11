@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 namespace SimplyBudget.Models
 {
     /// <summary>
-    /// Represents the type of a financial record
+    /// Represents the type of a financial record.
     /// </summary>
     public enum RecordType
     {
         /// <summary>
-        /// Incoming money (e.g. salary, gift, )
+        /// Incoming money. (e.g. salary, gift, )
         /// </summary>
         Income,
         /// <summary>
-        /// Outgoing money (e.g. food, transport)
+        /// Outgoing money. (e.g. food, transport)
         /// </summary>
         Expense
     }

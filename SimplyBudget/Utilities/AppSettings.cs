@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SimplyBudget.Services
 {
     /// <summary>
-    /// A class used for global managing of the app settings, uses a singleton design pattern
+    /// A class used for global managing of the app settings.
     /// </summary>
     public class AppSettings
     {
@@ -34,7 +34,16 @@ namespace SimplyBudget.Services
         public int LastID { get; set; } = -1;
 
         /// <summary>
-        /// This funfciton loads the app settings from the settings.ini file
+        /// Generates a new unique ID for records.
+        /// </summary>
+        /// <returns>A new unique ID for records.</returns>
+        public int GetNextID()
+        {
+            return ++LastID;
+        }
+
+        /// <summary>
+        /// Loads and updates the app settings from the settings.ini file.
         /// </summary>
         public void Load()
         {
@@ -74,8 +83,7 @@ namespace SimplyBudget.Services
         }
 
         /// <summary>
-        /// This function saves the current settings into the settings.ini file or creates a new
-        /// file if it can't find one
+        /// Saves the current settings into the settings.ini file or creates a new file if it can't find one.
         /// </summary>
         public void Save()
         {

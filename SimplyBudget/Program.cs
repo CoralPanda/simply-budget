@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimplyBudget.Services;
 
 namespace SimplyBudget
 {
@@ -16,6 +17,10 @@ namespace SimplyBudget
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            AppSettings.Instance.Load();
+            CategoryManager.Instance.Load();
+
             Application.Run(new MainForm());
         }
     }
