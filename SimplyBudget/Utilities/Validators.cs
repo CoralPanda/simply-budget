@@ -20,7 +20,7 @@ namespace SimplyBudget.Utilities
         /// </summary>
         /// <param name="textBox">What field should be checked.</param>
         /// <param name="errorProvider">Where the error should be thrown.</param>
-        /// <returns>Value is required, must be a non-negative number and a decimal number must use a comma.</returns>
+        /// <returns>Value is required, must be a non-negative number.</returns>
         public static bool RecordAmount(TextBox textBox, ErrorProvider errorProvider)
         {
             if (string.IsNullOrEmpty(textBox.Text))
@@ -28,9 +28,9 @@ namespace SimplyBudget.Utilities
                 errorProvider.SetError(textBox, "This field is required.");
                 return true;
             }
-            else if (!Regex.IsMatch(textBox.Text, @"^\d+,?\d*$"))
+            else if (!Regex.IsMatch(textBox.Text, @"^\d+[,.]?\d*$"))
             {
-                errorProvider.SetError(textBox, "This field only accepts non-negative numbers. For decimal numbers please use a comma.");
+                errorProvider.SetError(textBox, "This field only accepts non-negative numbers");
                 return true;
             }
             return false;

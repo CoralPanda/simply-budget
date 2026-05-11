@@ -45,13 +45,19 @@
             this.buttonOverview = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.labelCurrentMostCommon = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.labelCurrentCurrentBalance = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.labelCurrentExpenses = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.labelCurrentHighestExpense = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.labelCurrentHighestIncome = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelCurrentIncomes = new System.Windows.Forms.Label();
+            this.progressBarCurrentMonth = new System.Windows.Forms.ProgressBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,10 +73,17 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonResetChanges = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLatestRecords)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
@@ -99,19 +112,19 @@
             // importDataToolStripMenuItem
             // 
             this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
-            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.importDataToolStripMenuItem.Text = "Import data...";
             // 
             // exportDataToolStripMenuItem
             // 
             this.exportDataToolStripMenuItem.Name = "exportDataToolStripMenuItem";
-            this.exportDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportDataToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.exportDataToolStripMenuItem.Text = "Export data...";
             // 
             // saveAllToolStripMenuItem
             // 
             this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.saveAllToolStripMenuItem.Text = "Save all";
             this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
             // 
@@ -146,14 +159,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewLatestRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLatestRecords.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewLatestRecords.Location = new System.Drawing.Point(6, 19);
             this.dataGridViewLatestRecords.MultiSelect = false;
             this.dataGridViewLatestRecords.Name = "dataGridViewLatestRecords";
-            this.dataGridViewLatestRecords.ReadOnly = true;
             this.dataGridViewLatestRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewLatestRecords.Size = new System.Drawing.Size(591, 263);
             this.dataGridViewLatestRecords.TabIndex = 1;
-            this.dataGridViewLatestRecords.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLatestRecords_CellContentDoubleClick);
+            this.dataGridViewLatestRecords.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewLatestRecords_CellMouseDoubleClick);
             // 
             // buttonRecordAdd
             // 
@@ -205,7 +218,7 @@
             // buttonOverview
             // 
             this.buttonOverview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOverview.Location = new System.Drawing.Point(499, 288);
+            this.buttonOverview.Location = new System.Drawing.Point(395, 288);
             this.buttonOverview.Name = "buttonOverview";
             this.buttonOverview.Size = new System.Drawing.Size(98, 23);
             this.buttonOverview.TabIndex = 6;
@@ -214,6 +227,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buttonResetChanges);
             this.groupBox2.Controls.Add(this.dataGridViewLatestRecords);
             this.groupBox2.Controls.Add(this.buttonRecordAdd);
             this.groupBox2.Controls.Add(this.buttonOverview);
@@ -228,13 +242,14 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.progressBar1);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.groupBox10);
+            this.groupBox3.Controls.Add(this.groupBox9);
+            this.groupBox3.Controls.Add(this.groupBox8);
+            this.groupBox3.Controls.Add(this.groupBox7);
+            this.groupBox3.Controls.Add(this.groupBox6);
+            this.groupBox3.Controls.Add(this.groupBox1);
+            this.groupBox3.Controls.Add(this.progressBarCurrentMonth);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 27);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(299, 199);
@@ -242,66 +257,128 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Current month";
             // 
-            // progressBar1
+            // groupBox10
             // 
-            this.progressBar1.Location = new System.Drawing.Point(9, 164);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(284, 23);
-            this.progressBar1.TabIndex = 6;
+            this.groupBox10.Controls.Add(this.labelCurrentMostCommon);
+            this.groupBox10.Location = new System.Drawing.Point(147, 114);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(146, 41);
+            this.groupBox10.TabIndex = 11;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Most common category";
             // 
-            // label11
+            // labelCurrentMostCommon
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(128, 96);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Most common expense category";
+            this.labelCurrentMostCommon.AutoSize = true;
+            this.labelCurrentMostCommon.Location = new System.Drawing.Point(6, 16);
+            this.labelCurrentMostCommon.Name = "labelCurrentMostCommon";
+            this.labelCurrentMostCommon.Size = new System.Drawing.Size(10, 13);
+            this.labelCurrentMostCommon.TabIndex = 5;
+            this.labelCurrentMostCommon.Text = "-";
             // 
-            // label10
+            // groupBox9
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(128, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Highest income";
+            this.groupBox9.Controls.Add(this.labelCurrentCurrentBalance);
+            this.groupBox9.Location = new System.Drawing.Point(6, 114);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(135, 41);
+            this.groupBox9.TabIndex = 12;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Current balance";
             // 
-            // label9
+            // labelCurrentCurrentBalance
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(128, 55);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Highest expense";
+            this.labelCurrentCurrentBalance.AutoSize = true;
+            this.labelCurrentCurrentBalance.Location = new System.Drawing.Point(6, 16);
+            this.labelCurrentCurrentBalance.Name = "labelCurrentCurrentBalance";
+            this.labelCurrentCurrentBalance.Size = new System.Drawing.Size(10, 13);
+            this.labelCurrentCurrentBalance.TabIndex = 4;
+            this.labelCurrentCurrentBalance.Text = "-";
             // 
-            // label8
+            // groupBox8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Current balance";
+            this.groupBox8.Controls.Add(this.labelCurrentExpenses);
+            this.groupBox8.Location = new System.Drawing.Point(6, 67);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(135, 41);
+            this.groupBox8.TabIndex = 11;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Expenses";
             // 
-            // label7
+            // labelCurrentExpenses
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 55);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Expenses";
+            this.labelCurrentExpenses.AutoSize = true;
+            this.labelCurrentExpenses.Location = new System.Drawing.Point(6, 16);
+            this.labelCurrentExpenses.Name = "labelCurrentExpenses";
+            this.labelCurrentExpenses.Size = new System.Drawing.Size(10, 13);
+            this.labelCurrentExpenses.TabIndex = 3;
+            this.labelCurrentExpenses.Text = "-";
             // 
-            // label6
+            // groupBox7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Incomes";
+            this.groupBox7.Controls.Add(this.labelCurrentHighestExpense);
+            this.groupBox7.Location = new System.Drawing.Point(147, 67);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(146, 41);
+            this.groupBox7.TabIndex = 10;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Highest expense";
+            // 
+            // labelCurrentHighestExpense
+            // 
+            this.labelCurrentHighestExpense.AutoSize = true;
+            this.labelCurrentHighestExpense.Location = new System.Drawing.Point(6, 16);
+            this.labelCurrentHighestExpense.Name = "labelCurrentHighestExpense";
+            this.labelCurrentHighestExpense.Size = new System.Drawing.Size(10, 13);
+            this.labelCurrentHighestExpense.TabIndex = 2;
+            this.labelCurrentHighestExpense.Text = "-";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.labelCurrentHighestIncome);
+            this.groupBox6.Location = new System.Drawing.Point(147, 20);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(146, 41);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Highest income";
+            // 
+            // labelCurrentHighestIncome
+            // 
+            this.labelCurrentHighestIncome.AutoSize = true;
+            this.labelCurrentHighestIncome.Location = new System.Drawing.Point(6, 16);
+            this.labelCurrentHighestIncome.Name = "labelCurrentHighestIncome";
+            this.labelCurrentHighestIncome.Size = new System.Drawing.Size(10, 13);
+            this.labelCurrentHighestIncome.TabIndex = 1;
+            this.labelCurrentHighestIncome.Text = "-";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelCurrentIncomes);
+            this.groupBox1.Location = new System.Drawing.Point(7, 20);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(134, 41);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Incomes";
+            // 
+            // labelCurrentIncomes
+            // 
+            this.labelCurrentIncomes.AutoSize = true;
+            this.labelCurrentIncomes.Location = new System.Drawing.Point(6, 16);
+            this.labelCurrentIncomes.Name = "labelCurrentIncomes";
+            this.labelCurrentIncomes.Size = new System.Drawing.Size(10, 13);
+            this.labelCurrentIncomes.TabIndex = 0;
+            this.labelCurrentIncomes.Text = "-";
+            // 
+            // progressBarCurrentMonth
+            // 
+            this.progressBarCurrentMonth.Enabled = false;
+            this.progressBarCurrentMonth.Location = new System.Drawing.Point(7, 164);
+            this.progressBarCurrentMonth.MarqueeAnimationSpeed = 0;
+            this.progressBarCurrentMonth.Name = "progressBarCurrentMonth";
+            this.progressBarCurrentMonth.Size = new System.Drawing.Size(286, 23);
+            this.progressBarCurrentMonth.TabIndex = 6;
             // 
             // groupBox4
             // 
@@ -448,6 +525,17 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // buttonResetChanges
+            // 
+            this.buttonResetChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonResetChanges.Location = new System.Drawing.Point(499, 288);
+            this.buttonResetChanges.Name = "buttonResetChanges";
+            this.buttonResetChanges.Size = new System.Drawing.Size(98, 23);
+            this.buttonResetChanges.TabIndex = 7;
+            this.buttonResetChanges.Text = "Reset changes";
+            this.buttonResetChanges.UseVisualStyleBackColor = true;
+            this.buttonResetChanges.Click += new System.EventHandler(this.buttonResetChanges_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,7 +558,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLatestRecords)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -503,13 +602,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBarCurrentMonth;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -520,6 +613,19 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ToolStripMenuItem saveAllToolStripMenuItem;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label labelCurrentHighestExpense;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label labelCurrentHighestIncome;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label labelCurrentIncomes;
+        private System.Windows.Forms.Label labelCurrentMostCommon;
+        private System.Windows.Forms.Label labelCurrentCurrentBalance;
+        private System.Windows.Forms.Label labelCurrentExpenses;
+        private System.Windows.Forms.Button buttonResetChanges;
     }
 }
 

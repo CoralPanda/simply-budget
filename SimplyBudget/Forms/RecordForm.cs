@@ -24,6 +24,9 @@ namespace SimplyBudget
         {
             InitializeComponent();
 
+            // Updates the currency label to the current currency
+            labelRecordCurrency.Text = AppSettings.Instance.Currency;
+
             // When the Edit button is pressed the fields are filled with the selected record's values
             if (record != null)
             {

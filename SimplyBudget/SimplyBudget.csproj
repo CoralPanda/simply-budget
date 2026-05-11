@@ -75,6 +75,7 @@
     <Compile Include="Forms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\BudgetManager.cs" />
     <Compile Include="Services\CategoryManager.cs" />
     <Compile Include="Services\RecordManager.cs" />
     <Compile Include="Utilities\AppSettings.cs" />
@@ -101,7 +102,10 @@
     <Content Include="Data\categories.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Data\internal_records.csv" />
+    <Content Include="Data\internal_records.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\DataSources\SimplyBudget.Services.RecordManager.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

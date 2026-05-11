@@ -66,6 +66,14 @@ namespace SimplyBudget.Services
         }
 
         /// <summary>
+        /// Clears all records from the records list.
+        /// </summary>
+        public void Clear()
+        {
+            records.Clear();
+        }
+
+        /// <summary>
         /// Finds a record from the record list from an ID.
         /// </summary>
         /// <param name="idOfRecord">ID of the record to be found.</param>
